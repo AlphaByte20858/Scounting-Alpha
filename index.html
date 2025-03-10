@@ -166,7 +166,7 @@
                 <h3>ROBÔ CLIMBOU?</h3>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-outline-primary" id="buttonClimbTeleop0" onclick="setClimbTeleop('buttonClimbTeleop0')">N/O</button>
-                    <button type="button" class="btn btn-outline-primary" id="buttonClimbTeleopObs" onclick="setClimbTeleop('buttonClimbTeleopObs')">Observação</button>
+                    <button type="button" class="btn btn-outline-primary" id="buttonClimbTeleopObs" onclick="setClimbTeleop('buttonClimbTeleopObs')">Obs</button>
                     <button type="button" class="btn btn-outline-primary" id="buttonClimbTeleop1" onclick="setClimbTeleop('buttonClimbTeleop1')">Nível 1</button>
                     <button type="button" class="btn btn-outline-primary" id="buttonClimbTeleop2" onclick="setClimbTeleop('buttonClimbTeleop2')">Nível 2</button>
                     <button type="button" class="btn btn-outline-primary" id="buttonClimbTeleop3" onclick="setClimbTeleop('buttonClimbTeleop3')">Nível 3</button>
@@ -205,35 +205,6 @@
     </form>
     
     <script>
-        function updateScore(id, value) {
-            const input = document.getElementById(id);
-            let currentValue = parseInt(input.value);
-            currentValue += value;
-            if (currentValue < 0) currentValue = 0; // Impede valores negativos
-            input.value = currentValue;
-        }
-    
-        function setClimbAuto(buttonId) {
-            document.getElementById('AutoClimb').value = buttonId;
-            resetClimbAutoButtons();
-            document.getElementById(buttonId).classList.add('active');
-        }
-    
-        function resetClimbAutoButtons() {
-            const buttons = document.querySelectorAll('#buttonClimbAuto0, #buttonClimbAutoObs, #buttonClimbAutoAsc');
-            buttons.forEach(button => button.classList.remove('active'));
-        }
-    
-        function setClimbTeleop(buttonId) {
-            document.getElementById('TeleopClimb').value = buttonId;
-            resetClimbTeleopButtons();
-            document.getElementById(buttonId).classList.add('active');
-        }
-    
-        function resetClimbTeleopButtons() {
-            const buttons = document.querySelectorAll('#buttonClimbTeleop0, #buttonClimbTeleopObs, #buttonClimbTeleop1, #buttonClimbTeleop2, #buttonClimbTeleop3');
-            buttons.forEach(button => button.classList.remove('active'));
-        }
     
         function handleFormSubmit(event) {
             event.preventDefault(); // Previne o envio padrão do formulário

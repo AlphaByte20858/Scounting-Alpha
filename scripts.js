@@ -10,19 +10,45 @@ function updateScore(id, delta) {
 }
 
 
-function setClimbAuto(number){
+function setClimbAuto(state){
     clearClimbAutoButtons()
-    buttonClimbAuto = number;
+    buttonClimbAuto = state;
     document.getElementById(buttonClimbAuto).classList.toggle("btn-primary");
-    document.getElementById("AutoClimb").value = number;
+    switch (state){
+        case "buttonClimbAuto0":
+            document.getElementById("AutoClimb").value = "Não climbou"
+            break;
+        case "buttonClimbAutoObs":
+            document.getElementById("AutoClimb").value = "Observação"
+            break;
+        case "buttonClimbAutoAsc":
+            document.getElementById("AutoClimb").value = "Ascent"
+            break
+    }
     console.log(document.getElementById("AutoClimb").value)
 }
 
-function setClimbTeleop(number){
+function setClimbTeleop(state){
     clearClimbTeleopButtons()
-    buttonClimbTeleop = number;
+    buttonClimbTeleop = state;
     document.getElementById(buttonClimbTeleop).classList.toggle("btn-primary");
-    document.getElementById("TeleopClimb").value = number;
+    switch (state){
+        case "buttonClimbTeleop0":
+            document.getElementById("TeleopClimb").value = "Não climbou"
+            break;
+        case "buttonClimbTeleopObs":
+            document.getElementById("TeleopClimb").value = "Observação"
+            break;
+        case "buttonClimbTeleop1":
+            document.getElementById("TeleopClimb").value = "Climb Level 1"
+            break;
+        case "buttonClimbTeleop2":
+            document.getElementById("TeleopClimb").value = "Climb Level 2"
+            break;
+        case "buttonClimbTeleop3":
+            document.getElementById("TeleopClimb").value = "Climb Level 3"
+            break;    
+    }
     console.log(document.getElementById("TeleopClimb").value)
 }
     
