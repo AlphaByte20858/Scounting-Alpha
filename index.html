@@ -202,33 +202,15 @@
                 <input class="submitbtn" type="submit" value="Enviar">
             </div>
         </div>
+        <input type="hidden" name="data[PontuacaoTotal]" id="PontuacaoTotal" value="0">
+    <input type="hidden" name="data[PontuacaoAutonomo]" id="PontuacaoAutonomo" value="0">
+    <input type="hidden" name="data[PontuacaoClimb]" id="PontuacaoClimb" value="0">
+    <input type="hidden" name="data[PontuacaoTeleop]" id="PontuacaoTeleop" value="0">
+    <input type="hidden" name="data[PontuacaoPenalidade]" id="PontuacaoPenalidade" value="0">
+    
     </form>
+
     
-    <script>
-    
-        function handleFormSubmit(event) {
-            event.preventDefault(); // Previne o envio padrão do formulário
-            
-            // Envia os dados do formulário para o SheetDB
-            const form = event.target;
-            const formData = new FormData(form);
-    
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Formulário enviado com sucesso
-                alert('Dados enviados com sucesso!');
-                form.reset(); // Reseta o formulário
-                window.location.href = "https://rttanus.github.io/Scouting-FTCAlpha/"; // Volta para a página inicial
-            })
-            .catch(error => {
-                console.error('Erro ao enviar o formulário:', error);
-            });
-        }
-    </script>    
     
 
 </html>
