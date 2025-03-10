@@ -1,6 +1,6 @@
 let buttonClimbTeleop;
 let buttonClimbAuto;
-let agrvai;
+
 
 function updateScore(id, delta) {
     const input = document.getElementById(id);
@@ -16,7 +16,7 @@ function setClimbAuto(state){
     document.getElementById(buttonClimbAuto).classList.toggle("btn-primary");
     switch (state){
         case "buttonClimbAuto0":
-            document.getElementById("AutoClimb").value = "Não climbou"
+            document.getElementById("AutoClimb").value = "Não Estacionou"
             break;
         case "buttonClimbAutoObs":
             document.getElementById("AutoClimb").value = "Observação"
