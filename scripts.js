@@ -1,6 +1,6 @@
 let buttonClimbTeleop;
 let buttonClimbAuto;
-
+let agrvai;
 
 function updateScore(id, delta) {
     const input = document.getElementById(id);
